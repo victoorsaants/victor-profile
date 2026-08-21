@@ -1,0 +1,226 @@
+.hero {
+  padding-top: 48px;
+  padding-bottom: 72px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 56px;
+  align-items: center;
+}
+
+.greeting {
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin-top: 10px;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(4rem, 9vw, 7.2rem);
+  font-weight: 750;
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+}
+
+.role {
+  margin-top: 18px;
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.headline {
+  max-width: 36rem;
+  margin-top: 20px;
+  color: var(--ink-muted);
+  font-size: 1.12rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.social {
+  display: flex;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink-muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+  transition: color 200ms var(--ease);
+}
+
+.social a:hover,
+.social a:focus-visible {
+  color: var(--ink);
+}
+
+.visual {
+  position: relative;
+  min-height: 380px;
+}
+
+.codeCard {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+  animation: float 7s var(--ease) infinite;
+}
+
+.codeHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-muted);
+}
+
+.codeHeader span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-strong);
+}
+
+.codeHeader span:first-child {
+  background: #d87a63;
+}
+
+.codeHeader span:nth-child(2) {
+  background: #d2b56a;
+}
+
+.codeHeader span:nth-child(3) {
+  background: #7da67a;
+}
+
+.codeHeader p {
+  margin-left: 8px;
+  color: var(--ink-faint);
+  font-size: 0.78rem;
+  font-weight: 650;
+}
+
+.code {
+  margin: 0;
+  padding: 24px 22px 28px;
+  font-family: ui-monospace, "Cascadia Code", "SFMono-Regular", monospace;
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.kw {
+  color: var(--accent);
+}
+
+.str {
+  color: #3d6b5a;
+}
+
+[data-theme="dark"] .str {
+  color: #8fbfa8;
+}
+
+.chip {
+  position: absolute;
+  z-index: 2;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow);
+  font-size: 0.78rem;
+  font-weight: 700;
+  animation: drift 6.5s ease-in-out infinite;
+}
+
+.chip1 {
+  top: 18px;
+  right: -8px;
+}
+
+.chip2 {
+  top: 46%;
+  left: -18px;
+  animation-delay: 0.8s;
+}
+
+.chip3 {
+  right: 18px;
+  bottom: 64px;
+  animation-delay: 1.4s;
+}
+
+.chip4 {
+  left: 42px;
+  bottom: 10px;
+  animation-delay: 0.4s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .visual {
+    min-height: 300px;
+    max-width: 480px;
+  }
+
+  .chip2 {
+    left: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding-top: 28px;
+  }
+
+  .chip {
+    display: none;
+  }
+}

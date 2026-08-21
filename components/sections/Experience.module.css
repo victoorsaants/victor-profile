@@ -1,0 +1,80 @@
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  max-width: 760px;
+  list-style: none;
+}
+
+.timeline li {
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 7px;
+  width: 1px;
+  background: var(--border-strong);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 24px;
+  padding: 8px 0 8px 32px;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  background: var(--bg);
+}
+
+.year {
+  color: var(--accent);
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.content {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--bg-elevated);
+  transition:
+    transform 220ms var(--ease),
+    box-shadow 220ms var(--ease);
+}
+
+.content:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.content h4 {
+  margin: 0 0 8px;
+  font-size: 1.02rem;
+}
+
+.content p {
+  color: var(--ink-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}

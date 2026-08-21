@@ -1,0 +1,49 @@
+.control {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  transition:
+    background-color 200ms var(--ease),
+    color 200ms var(--ease),
+    opacity 200ms var(--ease);
+}
+
+.button + .button {
+  border-top: 1px solid var(--border);
+}
+
+.button:hover {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+@media (max-width: 720px) {
+  .control {
+    right: 12px;
+    bottom: 16px;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+}
