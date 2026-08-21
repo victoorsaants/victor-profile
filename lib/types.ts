@@ -30,6 +30,7 @@ export type Project = {
   status: ProjectStatus;
   featured?: boolean;
   accent: string;
+  image?: string;
 };
 
 export type ExperienceItem = {
@@ -43,4 +44,14 @@ export type StatItem = {
   id: string;
   value: string;
   label: string;
+};
+
+export type Course = {
+  id: string;
+  title: string;
+  institution: string;
+  year: string;
+  hours: string;
+  description: string;
+  credential?: string;
 };

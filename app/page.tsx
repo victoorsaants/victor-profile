@@ -3,6 +3,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ScrollControl } from "@/components/layout/ScrollControl";
 import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
+import { Courses } from "@/components/sections/Courses";
 import { Experience } from "@/components/sections/Experience";
 import { Hero } from "@/components/sections/Hero";
 import { Projects } from "@/components/sections/Projects";
@@ -19,6 +20,7 @@ export default function HomePage() {
         <Skills />
         <Projects />
         <Experience />
+        <Courses />
         <Stats />
         <Contact />
       </main>

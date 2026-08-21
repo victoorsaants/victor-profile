@@ -13,7 +13,7 @@ export function Contact() {
         <Reveal>
           <SectionHeading
             id="contato-title"
-            number="05"
+            number="06"
             eyebrow="Contato"
             title={site.contact.title}
             description={site.contact.description}

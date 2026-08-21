@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Github, Globe } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Reveal } from "@/components/ui/Reveal";
@@ -13,6 +14,19 @@ const statusLabel: Record<Project["status"], string> = {
 };
 
 function ProjectThumb({ project }: { project: Project }) {
+  if (project.image) {
+    return (
+      <div className={styles.thumb}>
+        <Image
+          src={project.image}
+          alt={`Captura da ${project.title}`}
+          fill
+          sizes="(max-width: 860px) 100vw, 360px"
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={styles.thumb} style={{ background: project.accent }}>
       <svg viewBox="0 0 320 200" role="img" aria-label={`Thumbnail placeholder de ${project.title}`}>
@@ -26,9 +40,9 @@ function ProjectThumb({ project }: { project: Project }) {
   );
 }
 
-function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className={`${styles.card} ${featured ? styles.featured : ""}`}>
+    <article className={styles.card}>
       <ProjectThumb project={project} />
       <div className={styles.body}>
         <div className={styles.meta}>
@@ -64,8 +78,6 @@ function ProjectCard({ project, featured = false }: { project: Project; featured
 }
 
 export function Projects() {
-  const [featured, ...rest] = projects;
-
   return (
     <section id="projetos" className="section" aria-labelledby="projetos-title">
       <div className="container">
@@ -79,12 +91,7 @@ export function Projects() {
           />
         </Reveal>
         <div className={styles.grid}>
-          {featured ? (
-            <Reveal className={styles.featuredSlot}>
-              <ProjectCard project={featured} featured />
-            </Reveal>
-          ) : null}
-          {rest.map((project, index) => (
+          {projects.map((project, index) => (
             <Reveal key={project.id} delay={index * 80}>
               <ProjectCard project={project} />
             </Reveal>

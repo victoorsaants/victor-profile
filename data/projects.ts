@@ -10,7 +10,6 @@ export const projects: Project[] = [
     github: "https://github.com/",
     demo: "#projetos",
     status: "placeholder",
-    featured: true,
     accent: "#c45c26",
   },
   {
@@ -23,6 +22,7 @@ export const projects: Project[] = [
     demo: "https://join-sigma.vercel.app/",
     status: "shipped",
     accent: "#3d6b5a",
+    image: "/images/projects/join.png",
   },
   {
     id: "projeto-03",
@@ -45,5 +45,6 @@ export const projects: Project[] = [
     demo: "https://policiadme.com/login",
     status: "shipped",
     accent: "#8a5a3c",
+    image: "/images/projects/dme.jpg",
   },
 ];
