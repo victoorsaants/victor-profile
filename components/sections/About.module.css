@@ -6,25 +6,19 @@
 }
 
 .portrait {
-  display: grid;
-  place-items: center;
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 4 / 5;
   border-radius: 28px;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.18), transparent 28%),
-    linear-gradient(160deg, #c45c26 0%, #8a5a3c 48%, #161513 100%);
+  background: var(--bg-muted);
   box-shadow: var(--shadow);
 }
 
-.portrait span {
-  color: #f4f1ea;
-  font-family: var(--font-display), sans-serif;
-  font-size: 5rem;
-  font-weight: 750;
-  letter-spacing: -0.06em;
+.portrait img {
+  object-fit: cover;
+  object-position: center 18%;
 }
 
-.caption,
 .location {
   display: flex;
   align-items: center;

@@ -40,18 +40,20 @@
     background-color 220ms var(--ease);
 }
 
-.category li span {
+.category li span.icon {
   display: grid;
   place-items: center;
   width: 28px;
   height: 28px;
+  flex-shrink: 0;
   border-radius: 8px;
-  background: var(--accent-soft);
-  color: var(--accent-strong);
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  background: var(--bg-elevated);
+  color: var(--ink);
+}
+
+.category li span.icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 .category li:hover {

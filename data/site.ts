@@ -9,8 +9,8 @@ export const site = {
     "[placeholder] Desenvolvo aplicações modernas, escaláveis e focadas em oferecer boas experiências aos usuários.",
   location: "[placeholder] Localização a definir",
   email: "contato@example.com",
-  github: "https://github.com/",
-  linkedin: "https://www.linkedin.com/",
+  github: "https://github.com/victoorsaants",
+  linkedin: "https://www.linkedin.com/in/joão-victor-18b214326/",
   whatsapp: "",
   about: {
     intro:

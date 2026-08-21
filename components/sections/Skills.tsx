@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { SkillIcon } from "@/components/ui/SkillIcon";
 import { skillCategories } from "@/data/skills";
 import styles from "./Skills.module.css";
 
@@ -24,7 +25,9 @@ export function Skills() {
                 <ul>
                   {category.items.map((skill) => (
                     <li key={skill.name}>
-                      <span aria-hidden="true">{skill.name.slice(0, 2)}</span>
+                      <span className={styles.icon} aria-hidden="true">
+                        <SkillIcon name={skill.name} />
+                      </span>
                       {skill.name}
                     </li>
                   ))}

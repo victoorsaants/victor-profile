@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
@@ -25,13 +26,15 @@ export function About() {
 
         <div className={styles.layout}>
           <Reveal className={styles.portraitWrap}>
-            <div className={styles.portrait} aria-hidden="true">
-              <span>{site.name.slice(0, 1)}</span>
+            <div className={styles.portrait}>
+              <Image
+                src="/images/victor.png"
+                alt={`Foto de ${site.fullName}`}
+                fill
+                sizes="(max-width: 900px) 240px, 280px"
+                priority
+              />
             </div>
-            <p className={styles.caption}>
-              <span className="placeholder-flag">placeholder</span>
-              Foto / avatar a substituir
-            </p>
             <p className={styles.location}>{site.location}</p>
           </Reveal>
 
