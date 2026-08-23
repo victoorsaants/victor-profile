@@ -1,11 +1,14 @@
-import { Github, Linkedin, Mail, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { site } from "@/data/site";
+import { whatsappLink } from "@/lib/whatsapp";
 import styles from "./Contact.module.css";
 
 export function Contact() {
   const mailto = `mailto:${site.email}?subject=${encodeURIComponent("Contato pelo portfólio")}`;
+  const whatsapp = whatsappLink();
 
   return (
     <section id="contato" className="section" aria-labelledby="contato-title">
@@ -42,9 +45,9 @@ export function Contact() {
                 <Linkedin size={18} aria-hidden="true" />
                 LinkedIn
               </a>
-              {site.whatsapp ? (
-                <a href={site.whatsapp} target="_blank" rel="noreferrer noopener">
-                  <MessageCircle size={18} aria-hidden="true" />
+              {whatsapp ? (
+                <a href={whatsapp} target="_blank" rel="noreferrer noopener">
+                  <BrandIcon name="whatsapp" />
                   WhatsApp
                 </a>
               ) : null}

@@ -1,16 +1,13 @@
 import { ArrowDownRight, Github, Linkedin } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { Button } from "@/components/ui/Button";
 import { site } from "@/data/site";
+import { whatsappLink } from "@/lib/whatsapp";
 import styles from "./Hero.module.css";
 
-const floatingTech = [
-  { name: "React", className: "chip1" },
-  { name: "Next.js", className: "chip2" },
-  { name: "TypeScript", className: "chip3" },
-  { name: "Python", className: "chip4" },
-] as const;
-
 export function Hero() {
+  const whatsapp = whatsappLink();
+
   return (
     <section id="topo" className={`section ${styles.hero}`} aria-labelledby="hero-title">
       <div className={`container ${styles.grid}`}>
@@ -51,6 +48,17 @@ export function Hero() {
               <Linkedin size={18} aria-hidden="true" />
               LinkedIn
             </a>
+            {whatsapp ? (
+              <a
+                href={whatsapp}
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="WhatsApp"
+              >
+                <BrandIcon name="whatsapp" />
+                WhatsApp
+              </a>
+            ) : null}
           </div>
         </div>
 
@@ -60,31 +68,23 @@ export function Hero() {
               <span />
               <span />
               <span />
-              <p>profile.ts</p>
+              <p>profile.py</p>
             </div>
             <pre className={styles.code}>
               <code>
-                <span className={styles.kw}>const</span> profile = {"{"}
+                <span className={styles.kw}>class</span> Profile:
                 {"\n"}
-                {"  "}name: <span className={styles.str}>&quot;{site.name}&quot;</span>,
+                {"    "}name = <span className={styles.str}>&quot;{site.name}&quot;</span>
                 {"\n"}
-                {"  "}role: <span className={styles.str}>&quot;{site.role}&quot;</span>,
+                {"    "}role = <span className={styles.str}>&quot;{site.role}&quot;</span>
                 {"\n"}
-                {"  "}stack: [<span className={styles.str}>&quot;React&quot;</span>,{" "}
-                <span className={styles.str}>&quot;Next.js&quot;</span>],
+                {"    "}stack = [<span className={styles.str}>&quot;Python&quot;</span>,{" "}
+                <span className={styles.str}>&quot;FastAPI&quot;</span>]
                 {"\n"}
-                {"  "}focus: <span className={styles.str}>&quot;UX + scale&quot;</span>
-                {"\n"}
-                {"}"};
+                {"    "}focus = <span className={styles.str}>&quot;RPA + automação&quot;</span>
               </code>
             </pre>
           </div>
-
-          {floatingTech.map((tech) => (
-            <span key={tech.name} className={`${styles.chip} ${styles[tech.className]}`}>
-              {tech.name}
-            </span>
-          ))}
         </div>
       </div>
     </section>

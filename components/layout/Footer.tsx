@@ -1,9 +1,12 @@
 import { Github, Linkedin, Mail } from "lucide-react";
+import { BrandIcon } from "@/components/ui/BrandIcon";
 import { navItems, site } from "@/data/site";
+import { whatsappLink } from "@/lib/whatsapp";
 import styles from "./Footer.module.css";
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const whatsapp = whatsappLink();
 
   return (
     <footer id="rodape" className={styles.footer}>
@@ -52,6 +55,14 @@ export function Footer() {
                 LinkedIn
               </a>
             </li>
+            {whatsapp ? (
+              <li>
+                <a href={whatsapp} target="_blank" rel="noreferrer noopener" aria-label="WhatsApp">
+                  <BrandIcon name="whatsapp" />
+                  WhatsApp
+                </a>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>

@@ -73,7 +73,6 @@
 
 .visual {
   position: relative;
-  min-height: 380px;
 }
 
 .codeCard {
@@ -143,42 +142,6 @@
   color: #8fbfa8;
 }
 
-.chip {
-  position: absolute;
-  z-index: 2;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: var(--bg-elevated);
-  box-shadow: var(--shadow);
-  font-size: 0.78rem;
-  font-weight: 700;
-  animation: drift 6.5s ease-in-out infinite;
-}
-
-.chip1 {
-  top: 18px;
-  right: -8px;
-}
-
-.chip2 {
-  top: 46%;
-  left: -18px;
-  animation-delay: 0.8s;
-}
-
-.chip3 {
-  right: 18px;
-  bottom: 64px;
-  animation-delay: 1.4s;
-}
-
-.chip4 {
-  left: 42px;
-  bottom: 10px;
-  animation-delay: 0.4s;
-}
-
 @keyframes float {
   0%,
   100% {
@@ -189,16 +152,6 @@
   }
 }
 
-@keyframes drift {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
 @media (max-width: 900px) {
   .grid {
     grid-template-columns: 1fr;
@@ -206,21 +159,12 @@
   }
 
   .visual {
-    min-height: 300px;
     max-width: 480px;
-  }
-
-  .chip2 {
-    left: 8px;
   }
 }
 
 @media (max-width: 600px) {
   .hero {
     padding-top: 28px;
-  }
-
-  .chip {
-    display: none;
   }
 }

@@ -8,10 +8,11 @@ export const site = {
   headline:
     "[placeholder] Desenvolvo aplicações modernas, escaláveis e focadas em oferecer boas experiências aos usuários.",
   location: "[placeholder] Localização a definir",
-  email: "contato@example.com",
+  email: "dev.victor77@gmail.com",
   github: "https://github.com/victoorsaants",
   linkedin: "https://www.linkedin.com/in/joão-victor-18b214326/",
-  whatsapp: "",
+  /** Somente dígitos, com DDI e DDD. Ex.: "5579999998888". Vazio esconde o botão. */
+  whatsapp: "5579981295487",
   about: {
     intro:
       "[placeholder] Sou desenvolvedor de software e esta seção apresentará, em breve, um resumo real da minha trajetória. O texto atual é provisório e será substituído.",
