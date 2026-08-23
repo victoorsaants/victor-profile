@@ -13,7 +13,7 @@ export function Experience() {
             number="04"
             eyebrow="Experiência"
             title="Trajetória ao longo do tempo"
-            description="[placeholder] Itens da timeline são provisórios. Atualize data/experience.ts com cargos, empresas e períodos reais."
+            description="Do suporte de TI ao time de desenvolvimento, dentro do mesmo escritório de advocacia."
           />
         </Reveal>
         <ol className={styles.timeline}>
@@ -23,8 +23,18 @@ export function Experience() {
                 <article className={styles.item}>
                   <p className={styles.year}>{item.year}</p>
                   <div className={styles.content}>
-                    <h4>{item.title}</h4>
+                    <div className={styles.heading}>
+                      <h4>{item.title}</h4>
+                      {item.current ? <span className={styles.current}>Atual</span> : null}
+                    </div>
+                    <p className={styles.company}>{item.company}</p>
+                    <p className={styles.period}>{item.period}</p>
                     <p>{item.description}</p>
+                    <ul className={styles.highlights}>
+                      {item.highlights.map((highlight) => (
+                        <li key={highlight}>{highlight}</li>
+                      ))}
+                    </ul>
                   </div>
                 </article>
               </Reveal>

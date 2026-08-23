@@ -21,7 +21,7 @@ function ProjectThumb({ project }: { project: Project }) {
           src={project.image}
           alt={`Captura da ${project.title}`}
           fill
-          sizes="(max-width: 860px) 100vw, 360px"
+          sizes="(max-width: 620px) 100vw, 360px"
         />
       </div>
     );

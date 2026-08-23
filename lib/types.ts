@@ -36,7 +36,21 @@ export type Project = {
 export type ExperienceItem = {
   id: string;
   year: string;
+  period: string;
   title: string;
+  company: string;
+  description: string;
+  highlights: string[];
+  current?: boolean;
+};
+
+export type Education = {
+  id: string;
+  course: string;
+  institution: string;
+  logo: string;
+  period: string;
+  status: string;
   description: string;
 };
 
@@ -49,9 +63,17 @@ export type StatItem = {
 export type Course = {
   id: string;
   title: string;
-  institution: string;
   year: string;
   hours: string;
   description: string;
+  partner?: string;
   credential?: string;
+};
+
+export type CourseGroup = {
+  id: string;
+  institution: string;
+  logo: string;
+  summary: string;
+  courses: Course[];
 };

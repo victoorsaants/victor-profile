@@ -1,7 +1,7 @@
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 16px;
 }
 
 .card {
@@ -19,14 +19,14 @@
 }
 
 .card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
 .thumb {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   background: var(--bg-muted);
 }
 
@@ -47,8 +47,8 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 20px 20px 22px;
+  gap: 8px;
+  padding: 16px 16px 18px;
   flex: 1;
 }
 
@@ -60,39 +60,41 @@
 
 .body h3 {
   font-family: var(--font-display), sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.08rem;
   letter-spacing: -0.03em;
   line-height: 1.25;
 }
 
 .body p {
   color: var(--ink-muted);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
-.tech {
+.body .tech {
   margin-top: auto;
-  color: var(--ink) !important;
-  font-size: 0.82rem !important;
+  padding-top: 4px;
+  color: var(--ink);
+  font-size: 0.78rem;
   font-weight: 650;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .action {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  min-height: 38px;
-  padding: 0 12px;
+  min-height: 34px;
+  padding: 0 11px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   transition:
     background-color 200ms var(--ease),
@@ -107,7 +109,7 @@
   border-color: var(--border-strong);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 620px) {
   .grid {
     grid-template-columns: 1fr;
   }
