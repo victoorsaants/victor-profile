@@ -68,12 +68,14 @@ export type Course = {
   description: string;
   partner?: string;
   credential?: string;
+  credentialUrl?: string;
 };
 
 export type CourseGroup = {
   id: string;
   institution: string;
   logo: string;
+  logoTheme?: "dark";
   summary: string;
   courses: Course[];
 };

@@ -26,6 +26,11 @@
   object-fit: contain;
 }
 
+.logoDark {
+  background: #2a2a2c;
+  border-color: #3a3a3c;
+}
+
 .academicHeading {
   display: flex;
   align-items: center;
@@ -196,11 +201,14 @@
   color: var(--accent-strong);
   font-size: 0.86rem;
   font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .credential:hover,
 .credential:focus-visible {
-  text-decoration: underline;
+  text-decoration: none;
+  opacity: 0.82;
 }
 
 .certificate {

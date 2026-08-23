@@ -28,7 +28,7 @@ export function Courses() {
             number="05"
             eyebrow="Formação"
             title="Formação acadêmica e complementar"
-            description="Graduação em andamento, além de cursos e bootcamps concluídos."
+            description="Graduação em andamento, além de cursos, bootcamps e certificados concluídos."
           />
         </Reveal>
 
@@ -77,20 +77,33 @@ export function Courses() {
                       aria-controls={panelId}
                       onClick={() => setOpenGroup(open ? null : group.id)}
                     >
-                      <span className={styles.logo}>
-                        <Image
-                          src={group.logo}
-                          alt={`Logo da ${group.institution}`}
-                          width={160}
-                          height={160}
-                          className={styles.logoImage}
-                        />
+                      <span
+                        className={`${styles.logo} ${group.logoTheme === "dark" ? styles.logoDark : ""}`}
+                      >
+                        {group.logo.endsWith(".svg") ? (
+                          <img
+                            src={group.logo}
+                            alt={`Logo da ${group.institution}`}
+                            className={styles.logoImage}
+                          />
+                        ) : (
+                          <Image
+                            src={group.logo}
+                            alt={`Logo da ${group.institution}`}
+                            width={160}
+                            height={160}
+                            className={styles.logoImage}
+                          />
+                        )}
                       </span>
                       <span className={styles.groupInfo}>
                         <span className={styles.groupName}>{group.institution}</span>
                         <span className={styles.groupMeta}>
-                          {group.courses.length}{" "}
-                          {group.courses.length === 1 ? "curso" : "cursos"} · {hours}h
+                          {group.courses.length === 0
+                            ? "Nenhum certificado ainda"
+                            : `${group.courses.length} ${
+                                group.courses.length === 1 ? "curso" : "cursos"
+                              } · ${hours}h`}
                         </span>
                       </span>
                       <ChevronDown
@@ -103,6 +116,7 @@ export function Courses() {
 
                   <div id={panelId} className={styles.panel} hidden={!open}>
                     <p className={styles.summary}>{group.summary}</p>
+                    {group.courses.length > 0 ? (
                     <ul className={styles.list}>
                       {group.courses.map((course) => (
                         <li key={course.id} className={styles.course}>
@@ -121,10 +135,20 @@ export function Courses() {
                             >
                               Ver certificado
                             </button>
+                          ) : course.credentialUrl ? (
+                            <a
+                              className={styles.credential}
+                              href={course.credentialUrl}
+                              target="_blank"
+                              rel="noreferrer noopener"
+                            >
+                              Ver certificado
+                            </a>
                           ) : null}
                         </li>
                       ))}
                     </ul>
+                    ) : null}
                   </div>
                 </article>
               </Reveal>

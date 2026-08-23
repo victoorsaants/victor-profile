@@ -19,12 +19,12 @@ export default function Icon() {
           justifyContent: "center",
           background: "#c45c26",
           color: "#f4f1ea",
-          fontSize: 18,
+          fontSize: 13,
           fontWeight: 700,
-          letterSpacing: -1,
+          letterSpacing: -0.5,
         }}
       >
-        V
+        JV
       </div>
     ),
     size,

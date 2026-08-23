@@ -33,7 +33,7 @@ export default function OpenGraphImage() {
           Portfólio
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ fontSize: 88, fontWeight: 700, letterSpacing: -4 }}>Victor</div>
+          <div style={{ fontSize: 72, fontWeight: 700, letterSpacing: -3 }}>João Victor</div>
           <div style={{ fontSize: 32, color: "#b7b0a4", marginTop: 12 }}>
             Desenvolvedor de Software
           </div>

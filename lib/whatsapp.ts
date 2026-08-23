@@ -1,6 +1,6 @@
 import { site } from "@/data/site";
 
-const MESSAGE = "Olá, Victor! Vi seu portfólio e gostaria de conversar.";
+const MESSAGE = "Olá, João Victor! Vi seu portfólio e gostaria de conversar.";
 
 /**
  * Monta o link de conversa do WhatsApp a partir do número cadastrado em data/site.ts.

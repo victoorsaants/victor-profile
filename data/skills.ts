@@ -30,6 +30,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git" },
       { name: "GitHub" },
       { name: "Docker" },
+      { name: "n8n" },
       { name: "VS Code" },
       { name: "Cursor" },
       { name: "Claude Code" },

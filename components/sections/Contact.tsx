@@ -28,8 +28,7 @@ export function Contact() {
               {site.email}
             </a>
             <p className={styles.hint}>
-              O endereço acima abre o cliente de email. Não há envio pelo site — tudo permanece no
-              frontend.
+              O clique no endereço abre o seu aplicativo de email. O site não envia mensagens.
             </p>
 
             <div className={styles.channels}>

@@ -26,6 +26,24 @@ export const courseGroups: CourseGroup[] = [
     ],
   },
   {
+    id: "estudonauta",
+    institution: "Estudonauta",
+    logo: "/images/institutions/estudonauta-mark.png",
+    summary: "Certificados de programação em videoaulas, com validação pública no site da plataforma.",
+    courses: [
+      {
+        id: "programacao-basica-m00",
+        title: "Programação Básica: Módulo 00, Primeiros Passos",
+        year: "2025",
+        hours: "20h",
+        description:
+          "Curso concluído em videoaulas, com aproveitamento acima de 70%. Código do certificado: 3098-AD83-7.",
+        credentialUrl:
+          "https://estudonauta.com/certificates/certificado-20h/?course_id=44419&cert-nonce=d31a16fc93",
+      },
+    ],
+  },
+  {
     id: "curso-em-video",
     institution: "Curso em Vídeo",
     logo: "/images/institutions/curso-em-video.png",
@@ -60,5 +78,12 @@ export const courseGroups: CourseGroup[] = [
         description: "Fundamentos do sistema operacional Linux.",
       },
     ],
+  },
+  {
+    id: "udemy",
+    institution: "Udemy",
+    logo: "/images/institutions/udemy.svg",
+    summary: "Cursos e certificados da Udemy. A lista será preenchida em breve.",
+    courses: [],
   },
 ];

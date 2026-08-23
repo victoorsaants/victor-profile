@@ -1,8 +1,8 @@
 import type { NavItem } from "@/lib/types";
 
 export const site = {
-  name: "Victor",
-  fullName: "Victor",
+  name: "João Victor",
+  fullName: "João Victor",
   role: "Desenvolvedor de Software",
   greeting: "Olá, eu sou",
   headline:
@@ -31,9 +31,9 @@ export const site = {
       "[placeholder] Aberto a conversas sobre projetos, oportunidades e colaborações. Substitua este texto e os links pelos canais reais de contato.",
   },
   seo: {
-    title: "Victor | Desenvolvedor de Software",
+    title: "João Victor | Desenvolvedor de Software",
     description:
-      "[placeholder] Portfólio de Victor, desenvolvedor de software. Projetos, habilidades e formas de contato.",
+      "[placeholder] Portfólio de João Victor, desenvolvedor de software. Projetos, habilidades e formas de contato.",
     url: "https://example.com",
   },
 } as const;

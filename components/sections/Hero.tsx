@@ -79,7 +79,8 @@ export function Hero() {
                 {"    "}role = <span className={styles.str}>&quot;{site.role}&quot;</span>
                 {"\n"}
                 {"    "}stack = [<span className={styles.str}>&quot;Python&quot;</span>,{" "}
-                <span className={styles.str}>&quot;FastAPI&quot;</span>]
+                <span className={styles.str}>&quot;FastAPI&quot;</span>,{" "}
+                <span className={styles.str}>&quot;n8n&quot;</span>]
                 {"\n"}
                 {"    "}focus = <span className={styles.str}>&quot;RPA + automação&quot;</span>
               </code>
