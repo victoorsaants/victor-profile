@@ -6,8 +6,8 @@ export const site = {
   role: "Desenvolvedor de Software",
   greeting: "Olá, eu sou",
   headline:
-    "[placeholder] Desenvolvo aplicações modernas, escaláveis e focadas em oferecer boas experiências aos usuários.",
-  location: "[placeholder] Localização a definir",
+    "Desenvolvo automações e aplicações web com foco em reduzir trabalho manual e melhorar a experiência de quem usa o sistema.",
+  location: "Sergipe, Brasil",
   email: "dev.victor77@gmail.com",
   github: "https://github.com/victoorsaants",
   linkedin: "https://www.linkedin.com/in/joão-victor-18b214326/",
@@ -15,25 +15,25 @@ export const site = {
   whatsapp: "5579981295487",
   about: {
     intro:
-      "[placeholder] Sou desenvolvedor de software e esta seção apresentará, em breve, um resumo real da minha trajetória. O texto atual é provisório e será substituído.",
+      "Sou desenvolvedor de software e comecei em TI pelo suporte, no mesmo escritório de advocacia onde hoje atuo com automação. Cursando Análise e Desenvolvimento de Sistemas na Unit, construo aplicações web e rotinas que deixam o trabalho do dia a dia mais simples.",
     interests:
-      "[placeholder] Áreas de interesse: desenvolvimento web, interfaces cuidadosas e sistemas bem estruturados. Detalhes reais serão adicionados aqui.",
+      "Automação de processos, desenvolvimento web e sistemas bem estruturados. Gosto de transformar rotinas repetitivas em fluxos claros, do frontend ao backend.",
     technologies:
-      "[placeholder] Trabalho com um conjunto moderno de tecnologias de frontend e backend. A lista completa está na seção de skills e pode ser ajustada.",
+      "No dia a dia uso Python, FastAPI e n8n para automações, além de React, Next.js e TypeScript no frontend. Para dados, trabalho com PostgreSQL, MySQL e Supabase.",
     workingStyle:
-      "[placeholder] Prefiro código claro, iteração constante e atenção à experiência da pessoa que usa o produto. Esta descrição será refinada com a forma de trabalhar real.",
+      "Prefiro código claro, iteração constante e atenção a quem usa o produto. A passagem pelo suporte me ensinou a entender o problema real antes de automatizar.",
     goals:
-      "[placeholder] Objetivo profissional a definir — por exemplo, contribuir com produtos de impacto e continuar evoluindo como engenheiro.",
+      "Seguir evoluindo como desenvolvedor, aprofundar automação e contribuir com produtos que façam diferença no cotidiano das pessoas.",
   },
   contact: {
     title: "Vamos construir algo juntos?",
     description:
-      "[placeholder] Aberto a conversas sobre projetos, oportunidades e colaborações. Substitua este texto e os links pelos canais reais de contato.",
+      "Aberto a conversas sobre projetos, oportunidades e colaborações. Fale comigo por email, LinkedIn ou WhatsApp.",
   },
   seo: {
     title: "João Victor | Desenvolvedor de Software",
     description:
-      "[placeholder] Portfólio de João Victor, desenvolvedor de software. Projetos, habilidades e formas de contato.",
+      "Portfólio de João Victor, desenvolvedor de software. Projetos, automações, habilidades e formas de contato.",
     url: "https://example.com",
   },
 } as const;

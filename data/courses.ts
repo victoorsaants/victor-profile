@@ -13,6 +13,7 @@ export const courseGroups: CourseGroup[] = [
         year: "2026",
         hours: "27h",
         partner: "Blip",
+        icon: "/images/certificates/dio-logica-programacao.png",
         description: "Bootcamp de lógica de programação em parceria com a Blip.",
       },
       {
@@ -21,6 +22,7 @@ export const courseGroups: CourseGroup[] = [
         year: "2026",
         hours: "10h",
         partner: "AWS",
+        icon: "/images/certificates/dio-nexa-ml-genai.png",
         description: "Curso prático de machine learning e GenAI, powered by AWS.",
       },
     ],

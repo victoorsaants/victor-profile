@@ -20,17 +20,23 @@ export type SkillCategory = {
 
 export type ProjectStatus = "placeholder" | "in-progress" | "shipped";
 
+export type ProjectScreenshot = {
+  src: string;
+  alt: string;
+};
+
 export type Project = {
   id: string;
   title: string;
   description: string;
   technologies: string[];
-  github: string;
-  demo: string;
+  github?: string;
+  demo?: string;
   status: ProjectStatus;
   featured?: boolean;
   accent: string;
   image?: string;
+  screenshots?: ProjectScreenshot[];
 };
 
 export type ExperienceItem = {
@@ -67,6 +73,7 @@ export type Course = {
   hours: string;
   description: string;
   partner?: string;
+  icon?: string;
   credential?: string;
   credentialUrl?: string;
 };

@@ -120,6 +120,18 @@ export function Courses() {
                     <ul className={styles.list}>
                       {group.courses.map((course) => (
                         <li key={course.id} className={styles.course}>
+                          {course.icon ? (
+                            <span className={styles.courseBadge}>
+                              <Image
+                                src={course.icon}
+                                alt={`Badge de ${course.title}`}
+                                width={112}
+                                height={112}
+                                className={styles.courseBadgeImage}
+                              />
+                            </span>
+                          ) : null}
+                          <div className={styles.courseBody}>
                           <div className={styles.courseTop}>
                             <h5>{course.title}</h5>
                             <span className={styles.courseMeta}>
@@ -145,6 +157,7 @@ export function Courses() {
                               Ver certificado
                             </a>
                           ) : null}
+                          </div>
                         </li>
                       ))}
                     </ul>

@@ -20,7 +20,7 @@ export function About() {
             id="sobre-title"
             number="01"
             eyebrow="Sobre mim"
-            title="Trajetória em construção"
+            title="Do suporte ao desenvolvimento"
           />
         </Reveal>
 

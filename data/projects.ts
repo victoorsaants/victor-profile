@@ -2,15 +2,22 @@ import type { Project } from "@/lib/types";
 
 export const projects: Project[] = [
   {
-    id: "projeto-01",
-    title: "[placeholder] Nome do projeto 01",
+    id: "join-sistema",
+    title: "Sistema Join",
     description:
-      "[placeholder] Descrição curta do projeto e do problema que ele resolve. Substitua este texto, as tecnologias e os links quando o projeto real estiver pronto.",
-    technologies: ["React", "Next.js", "TypeScript", "FastAPI"],
-    github: "https://github.com/",
-    demo: "#projetos",
-    status: "placeholder",
-    accent: "#c45c26",
+      "Sistema de gestão da JOIN com prompts, dashboards e financeiro. Frontend em HTML, CSS e JavaScript, backend em Python com Flask e banco no Supabase.",
+    technologies: ["HTML", "CSS", "JavaScript", "Python", "Flask", "Supabase"],
+    demo: "https://www.justjoin.com.br/login",
+    status: "shipped",
+    featured: true,
+    accent: "#1f4e46",
+    image: "/images/projects/join-sistema/login.png",
+    screenshots: [
+      {
+        src: "/images/projects/join-sistema/login.png",
+        alt: "Tela de login do Sistema Join",
+      },
+    ],
   },
   {
     id: "projeto-02",
