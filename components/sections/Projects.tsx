@@ -180,7 +180,7 @@ export function Projects() {
         title={gallery ? `${gallery.project.title} · telas` : "Telas"}
         onClose={() => setGallery(null)}
       >
-        {current ? (
+        {gallery && current ? (
           <div className={styles.gallery}>
             <div className={styles.galleryStage}>
               {screenshots.length > 1 ? (

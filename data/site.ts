@@ -1,5 +1,15 @@
 import type { NavItem } from "@/lib/types";
 
+/**
+ * URL pública do site. Use NEXT_PUBLIC_SITE_URL para um domínio próprio;
+ * na Vercel, sem ela, cai no domínio de produção do projeto.
+ */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const site = {
   name: "João Victor",
   fullName: "João Victor",
@@ -34,7 +44,7 @@ export const site = {
     title: "João Victor | Desenvolvedor de Software",
     description:
       "Portfólio de João Victor, desenvolvedor de software. Projetos, automações, habilidades e formas de contato.",
-    url: "https://example.com",
+    url: siteUrl,
   },
 } as const;
 

@@ -139,23 +139,28 @@ export function Courses() {
                             </span>
                           </div>
                           <p className={styles.description}>{course.description}</p>
-                          {course.credential ? (
-                            <button
-                              type="button"
-                              className={styles.credential}
-                              onClick={() => setSelected(course)}
-                            >
-                              Ver certificado
-                            </button>
-                          ) : course.credentialUrl ? (
-                            <a
-                              className={styles.credential}
-                              href={course.credentialUrl}
-                              target="_blank"
-                              rel="noreferrer noopener"
-                            >
-                              Ver certificado
-                            </a>
+                          {course.credential || course.credentialUrl ? (
+                            <div className={styles.credentials}>
+                              {course.credential ? (
+                                <button
+                                  type="button"
+                                  className={styles.credential}
+                                  onClick={() => setSelected(course)}
+                                >
+                                  Ver certificado
+                                </button>
+                              ) : null}
+                              {course.credentialUrl ? (
+                                <a
+                                  className={styles.credential}
+                                  href={course.credentialUrl}
+                                  target="_blank"
+                                  rel="noreferrer noopener"
+                                >
+                                  {course.credential ? "Validar certificado" : "Ver certificado"}
+                                </a>
+                              ) : null}
+                            </div>
                           ) : null}
                           </div>
                         </li>
